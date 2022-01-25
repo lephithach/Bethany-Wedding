@@ -1,0 +1,122 @@
+.navbar-container {
+  height: 105px;
+
+  .navbar-wrapper {
+    display: flex;
+    line-height: 105px;
+
+    .brand-name {
+      font-family: "Signatie";
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    .navbar-list {
+      display: flex;
+      padding: 0;
+      gap: 0 20px;
+      margin-left: auto;
+
+      .navbar-item {
+        list-style-type: none;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 30px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          opacity: 0;
+          background-color: #000;
+          transition: all 0.25s ease-in-out;
+        }
+
+        &:hover::after {
+          opacity: 1;
+          bottom: 40px;
+          background-color: #a2783a;
+        }
+
+        .navbar-link {
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 12px;
+          letter-spacing: 3px;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-container {
+    .navbar-wrapper {
+      .navbar-show {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-container {
+    position: relative;
+
+    .navbar-wrapper {
+      .brand-name {
+        margin-left: 0.4rem;
+      }
+
+      .navbar-show {
+        display: block;
+        margin-left: auto;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 2rem;
+      }
+
+      .navbar-list.show {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+      }
+
+      .navbar-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 100;
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
+
+        .navbar-item {
+          list-style-type: none;
+          position: relative;
+          margin-left: 1rem;
+          padding: 5px 0;
+          line-height: 2.5;
+
+          &::after {
+            display: none;
+          }
+
+          &:hover::after {
+            display: none;
+          }
+
+          .navbar-link {
+            font-size: 12px;
+            letter-spacing: 3px;
+          }
+        }
+      }
+    }
+  }
+}

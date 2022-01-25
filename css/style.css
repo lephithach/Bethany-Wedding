@@ -1,0 +1,331 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+.slider .slick-arrow {
+  transform: scale(2);
+}
+.slider .slick-arrow::before {
+  color: #a2783a;
+}
+.slider .slick-prev {
+  left: -30px;
+}
+.slider .slick-next {
+  right: -30px;
+}
+
+@font-face {
+  font-family: Signatie;
+  src: url(../fonts/Signatie.woff2);
+}
+body {
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-container {
+  height: 105px;
+}
+.navbar-container .navbar-wrapper {
+  display: flex;
+  line-height: 105px;
+}
+.navbar-container .navbar-wrapper .brand-name {
+  font-family: "Signatie";
+  font-size: 2rem;
+  font-weight: 500;
+}
+.navbar-container .navbar-wrapper .navbar-list {
+  display: flex;
+  padding: 0;
+  gap: 0 20px;
+  margin-left: auto;
+}
+.navbar-container .navbar-wrapper .navbar-list .navbar-item {
+  list-style-type: none;
+  position: relative;
+}
+.navbar-container .navbar-wrapper .navbar-list .navbar-item::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+  background-color: #000;
+  transition: all 0.25s ease-in-out;
+}
+.navbar-container .navbar-wrapper .navbar-list .navbar-item:hover::after {
+  opacity: 1;
+  bottom: 40px;
+  background-color: #a2783a;
+}
+.navbar-container .navbar-wrapper .navbar-list .navbar-item .navbar-link {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 3px;
+  padding: 5px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-container .navbar-wrapper .navbar-show {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-container {
+    position: relative;
+  }
+  .navbar-container .navbar-wrapper .brand-name {
+    margin-left: 0.4rem;
+  }
+  .navbar-container .navbar-wrapper .navbar-show {
+    display: block;
+    margin-left: auto;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 2rem;
+  }
+  .navbar-container .navbar-wrapper .navbar-list.show {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+  }
+  .navbar-container .navbar-wrapper .navbar-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+  }
+  .navbar-container .navbar-wrapper .navbar-list .navbar-item {
+    list-style-type: none;
+    position: relative;
+    margin-left: 1rem;
+    padding: 5px 0;
+    line-height: 2.5;
+  }
+  .navbar-container .navbar-wrapper .navbar-list .navbar-item::after {
+    display: none;
+  }
+  .navbar-container .navbar-wrapper .navbar-list .navbar-item:hover::after {
+    display: none;
+  }
+  .navbar-container .navbar-wrapper .navbar-list .navbar-item .navbar-link {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+}
+.section-slider {
+  background-color: #f5f0ec;
+  padding: 4rem 0;
+}
+.section-slider .slider {
+  position: relative;
+}
+.section-slider .slider-img {
+  padding: 0 5px;
+}
+.section-slider .slider-img img {
+  width: 100%;
+}
+.section-slider .title-slider {
+  position: absolute;
+  font-family: "Signatie";
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+}
+
+.section-about {
+  padding: 4rem 0;
+}
+.section-about .about {
+  font-family: "Old Standard TT", serif;
+}
+.section-about .about-title {
+  font-size: 2.2rem;
+}
+.section-about .about .line {
+  border-top: 1px solid #a2783a;
+  width: 3.7rem !important;
+  margin-left: 0;
+}
+.section-about .about-description {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.section-about .about-content {
+  font-weight: 300;
+  font-family: "Nunito Sans", sans-serif;
+}
+.section-about .img-about img {
+  width: 90%;
+  position: relative;
+}
+.section-about .img-about::before {
+  content: "";
+  position: absolute;
+  border: 10px solid #f5f0ec;
+  left: 50px;
+  top: 30px;
+  right: 20px;
+  bottom: -30px;
+  z-index: -1;
+}
+.section-about .img-about span {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  font-family: "Signatie";
+  letter-spacing: 1px;
+  font-size: 2rem;
+  transform: translateX(-50%);
+  transform: rotate(-30deg);
+}
+
+.section-date {
+  padding: 4rem 0;
+  background-color: #faf7f5;
+}
+.section-date .date {
+  font-family: "Old Standard TT", serif;
+}
+.section-date .date-title {
+  font-size: 2.2rem;
+}
+.section-date .date .line {
+  border-top: 1px solid #a2783a;
+  width: 3.7rem !important;
+  margin-left: 0;
+}
+.section-date .date-content {
+  font-weight: 300;
+  font-family: "Nunito Sans", sans-serif;
+}
+.section-date .date-table {
+  width: 100%;
+}
+.section-date .date-table tr + tr {
+  border-top: 1px solid #ece3db;
+}
+.section-date .date-table tr td {
+  padding: 10px 0;
+}
+.section-date .date-table tr .col-left {
+  padding-right: 20px;
+  text-align: right;
+}
+.section-date .date-table tr .col-left h6 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+}
+.section-date .date-table tr .col-left h6 span {
+  font-size: 10px;
+}
+.section-date .date-table tr .col-right {
+  padding-left: 20px;
+  text-align: left;
+  font-family: "Signatie";
+  font-size: 1.5rem;
+}
+
+.section-clients {
+  padding: 4rem 0;
+}
+.section-clients .clients-slider .clients-img {
+  padding: 0 5px;
+}
+.section-clients .clients-slider .clients-img img {
+  width: 100%;
+}
+
+.footer {
+  padding: 4rem 0;
+  padding-bottom: 1rem;
+  background-color: #a2783a;
+  color: #fff;
+}
+.footer-logo {
+  font-family: "Signatie";
+}
+.footer-description {
+  font-weight: 300;
+  margin-top: 1.2rem;
+  line-height: 1.75em;
+  font-size: 15px;
+}
+.footer-social a {
+  color: #fff;
+}
+.footer-social a + a {
+  margin-left: 1rem;
+}
+.footer-nav-title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.footer-nav-list {
+  padding: 0;
+}
+.footer-nav-list .footer-nav-item {
+  list-style-type: none;
+  padding: 5px 0;
+}
+.footer-nav-list .footer-nav-item .footer-nav-link {
+  color: inherit;
+  font-weight: 300;
+}
+.footer hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer .footer-copyright {
+  padding-top: 1rem;
+}
+.footer .footer-copyright .left a {
+  color: #fff;
+  font-weight: 700;
+}
+.footer .footer-copyright .right {
+  text-align: right;
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    text-align: center;
+  }
+  .footer-description {
+    margin: 1.8rem 0;
+  }
+  .footer-social a {
+    color: #fff;
+    font-size: 1.7rem;
+  }
+  .footer-nav-title {
+    margin: 2rem 0 1rem 0;
+  }
+
+  .footer-copyright .right {
+    text-align: center !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

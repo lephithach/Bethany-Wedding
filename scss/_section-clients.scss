@@ -1,0 +1,14 @@
+.section-clients {
+  padding: $paddingSection;
+  //   background: #fbf9f9c2;
+
+  .clients-slider {
+    .clients-img {
+      padding: 0 5px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

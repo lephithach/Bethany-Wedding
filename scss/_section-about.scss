@@ -1,0 +1,56 @@
+.section-about {
+  padding: $paddingSection;
+
+  .about {
+    font-family: "Old Standard TT", serif;
+
+    &-title {
+      font-size: 2.2rem;
+    }
+
+    .line {
+      border-top: 1px solid #a2783a;
+      width: 3.7rem !important;
+      margin-left: 0;
+    }
+
+    &-description {
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    &-content {
+      font-weight: 300;
+      font-family: "Nunito Sans", sans-serif;
+    }
+  }
+
+  .img-about {
+    img {
+      width: 90%;
+      position: relative;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 10px solid #f5f0ec;
+      left: 50px;
+      top: 30px;
+      right: 20px;
+      bottom: -30px;
+      z-index: -1;
+    }
+
+    span {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      font-family: "Signatie";
+      letter-spacing: 1px;
+      font-size: 2rem;
+      transform: translateX(-50%);
+      transform: rotate(-30deg);
+    }
+  }
+}

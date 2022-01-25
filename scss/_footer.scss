@@ -1,0 +1,93 @@
+.footer {
+  padding: $paddingSection;
+  padding-bottom: 1rem;
+  background-color: #a2783a;
+  color: #fff;
+
+  &-logo {
+    font-family: "Signatie";
+  }
+
+  &-description {
+    font-weight: 300;
+    margin-top: 1.2rem;
+    line-height: 1.75em;
+    font-size: 15px;
+  }
+
+  &-social {
+    a {
+      color: #fff;
+    }
+
+    a + a {
+      margin-left: 1rem;
+    }
+  }
+
+  &-nav-title {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+
+  &-nav-list {
+    padding: 0;
+
+    .footer-nav-item {
+      list-style-type: none;
+      padding: 5px 0;
+
+      .footer-nav-link {
+        color: inherit;
+        font-weight: 300;
+      }
+    }
+  }
+
+  hr {
+    border-top: 1px solid rgba($color: #fff, $alpha: 0.2);
+  }
+
+  .footer-copyright {
+    padding-top: 1rem;
+
+    .left {
+      a {
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+
+    .right {
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    text-align: center;
+
+    &-description {
+      margin: 1.8rem 0;
+    }
+
+    &-social {
+      a {
+        color: #fff;
+        font-size: 1.7rem;
+      }
+    }
+
+    &-nav-title {
+      margin: 2rem 0 1rem 0;
+    }
+  }
+
+  .footer-copyright {
+    .right {
+      text-align: center !important;
+    }
+  }
+}

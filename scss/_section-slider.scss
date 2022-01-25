@@ -1,0 +1,23 @@
+.section-slider {
+  background-color: #f5f0ec;
+  padding: $paddingSection;
+
+  .slider {
+    position: relative;
+
+    &-img {
+      padding: 0 5px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .title-slider {
+    position: absolute;
+    font-family: "Signatie";
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,17 @@
+.slider {
+  .slick-arrow {
+    transform: scale(2);
+
+    &::before {
+      color: #a2783a;
+    }
+  }
+
+  .slick-prev {
+    left: -30px;
+  }
+
+  .slick-next {
+    right: -30px;
+  }
+}

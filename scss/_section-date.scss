@@ -1,0 +1,59 @@
+.section-date {
+  padding: $paddingSection;
+  background-color: #faf7f5;
+
+  .date {
+    font-family: "Old Standard TT", serif;
+
+    &-title {
+      font-size: 2.2rem;
+    }
+
+    .line {
+      border-top: 1px solid #a2783a;
+      width: 3.7rem !important;
+      margin-left: 0;
+    }
+
+    &-content {
+      font-weight: 300;
+      font-family: "Nunito Sans", sans-serif;
+    }
+  }
+
+  .date-table {
+    width: 100%;
+
+    tr + tr {
+      border-top: 1px solid #ece3db;
+    }
+
+    tr {
+      td {
+        padding: 10px 0;
+      }
+
+      .col-left {
+        padding-right: 20px;
+        text-align: right;
+
+        h6 {
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 0.25rem;
+
+          span {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .col-right {
+        padding-left: 20px;
+        text-align: left;
+        font-family: "Signatie";
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
