@@ -97,6 +97,7 @@ a:hover {
     outline: none;
     background-color: transparent;
     font-size: 2rem;
+    color: #000;
   }
   .navbar-container .navbar-wrapper .navbar-list.show {
     display: flex;
